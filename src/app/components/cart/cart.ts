@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';/*cart ts */
 import { CartItem } from '../../models/cart.model';
 import { CartService } from '../../services/cart';
 import { CommonModule } from '@angular/common';

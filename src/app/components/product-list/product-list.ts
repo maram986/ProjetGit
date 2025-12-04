@@ -24,15 +24,7 @@ export class ProductList implements OnInit {
     this.products=this.productService.getProducts();
     this.filteredProducts=this.products;
   }
-  filterByCategory(category:string):void{
-    this.selectedCategory=category;
-    if(category==='Tous'){
-      this.filteredProducts=this.products;
 
-    }else{
-      this.filteredProducts=this.productService.getProductsByCategory(category);
-    }
-  }
   addToCart(product:Product):void{
     this.cartService.addToCart(product);
     alert(`${product.name} ajouté au panier !`);

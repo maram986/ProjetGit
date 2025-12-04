@@ -1,7 +1,7 @@
 
-<div class="cart">
+<div class="cart"> <!--class cart-->
   <h2>Votre Panier</h2>
-  
+
   <div *ngIf="cartItems.length === 0" class="empty-cart">
     <p>Votre panier est vide</p>
     <a routerLink="/product" class="continue-shopping">Continuer vos achats</a>
@@ -13,7 +13,7 @@
         <img [src]="item.product.imageUrl" [alt]="item.product.name" class="cart-item-image">
         <div class="cart-item-details">
           <h4>{{ item.product.name }}</h4>
-          <p>{{ item.product.brand }} - {{ item.product.volume }}</p>
+
           <p class="price">{{ item.product.price }} DT</p>
         </div>
         <div class="quantity-controls">

@@ -1,12 +1,12 @@
 
 export interface Product {
+image: any;
+volume: any;
+brand: any;
+inStock: any;
   id: number;
   name: string;
-  brand: string;
   price: number;
   description: string;
   imageUrl: string;
-  category: string; 
-  volume: string; 
-  inStock: boolean;
 }

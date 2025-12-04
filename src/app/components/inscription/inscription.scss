@@ -1,107 +1,110 @@
-.inscription-container {
+$rose-light: #ffe8f0;
+$rose-soft: #ffd3e0;
+$rose-medium: #ffb5cc;
+$rose-dark: #ff7fa8;
+$rose-text: #6b5060;
+
+.inscription-page {
   min-height: 100vh;
+  background: $rose-light;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   padding: 20px;
 }
 
-.form-wrapper {
+.inscription-card {
   background: white;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 35px 40px;
   width: 100%;
-  max-width: 450px;
+  max-width: 430px;
+  border-radius: 16px;
+  box-shadow: 0 5px 18px rgba(255, 140, 170, 0.25);
+  border: 1px solid $rose-soft;
 
-  h1 {
+  .title {
     text-align: center;
-    color: #333;
-    margin-bottom: 30px;
-    font-size: 2rem;
+    color: $rose-dark;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 25px;
   }
 }
 
+/* Champs du formulaire */
 .form-group {
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
 
   label {
-    display: block;
-    margin-bottom: 8px;
-    color: #333;
-    font-weight: 500;
+    color: $rose-text;
+    font-size: 14px;
+    margin-bottom: 6px;
+    font-weight: 600;
   }
 
-  .form-control {
-    width: 100%;
+  input {
     padding: 12px;
-    border: 2px solid #e0e0e0;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
+    border: 1px solid $rose-soft;
+    background: $rose-light;
+    border-radius: 10px;
+    transition: 0.2s;
 
     &:focus {
       outline: none;
-      border-color: #667eea;
+      border-color: $rose-dark;
+      box-shadow: 0 0 5px rgba(255, 128, 165, 0.4);
     }
   }
 }
 
-.btn {
+/* Bouton inscription */
+.btn-submit {
   width: 100%;
   padding: 12px;
+  margin-top: 10px;
+  background: $rose-dark;
   border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-weight: 500;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 
-  &.btn-submit {
-    background: #667eea;
-    color: white;
-    margin-top: 10px;
+  &:hover {
+    background: darken($rose-dark, 5%);
+  }
 
-    &:hover:not(:disabled) {
-      background: #5568d3;
-    }
-
-    &:disabled {
-      background: #ccc;
-      cursor: not-allowed;
-    }
+  &:disabled {
+    background: $rose-soft;
+    cursor: not-allowed;
   }
 }
 
-.link-container {
+/* Liens bas */
+.extra-links {
   margin-top: 20px;
   text-align: center;
 
   p {
-    color: #666;
-    margin-bottom: 10px;
-
-    a {
-      color: #667eea;
-      text-decoration: none;
-      font-weight: 500;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
+    font-size: 14px;
+    color: $rose-text;
   }
 
-  .back-link {
-    display: inline-block;
-    color: #764ba2;
+  a {
+    color: $rose-dark;
+    font-weight: 600;
     text-decoration: none;
-    margin-top: 10px;
 
     &:hover {
       text-decoration: underline;
     }
   }
-}
 
+  .back-home {
+    display: inline-block;
+    margin-top: 10px;
+  }
+}

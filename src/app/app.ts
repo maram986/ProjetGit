@@ -8,14 +8,15 @@ import { Header } from './components/header/header';
   selector: 'app-root',
   standalone: true,  // Important : standalone
   imports: [
-    CommonModule, 
-    RouterOutlet, 
+    CommonModule,
+    RouterOutlet,
     RouterModule,
-    Header  
+    Header
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
 export class App {
   title = 'Luxe Parfums';
+newProducts: any;
 }

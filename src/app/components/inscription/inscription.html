@@ -1,67 +1,66 @@
-<div class="inscription-container">
-  <div class="form-wrapper">
-    <h1>Inscription</h1>
+<div class="inscription-page">
+
+  <div class="inscription-card">
+
+    <h2 class="title">Créer un compte</h2>
+
     <form (ngSubmit)="onSubmit()" #inscriptionForm="ngForm">
+
       <div class="form-group">
-        <label for="nom">Nom complet</label>
-        <input 
-          type="text" 
-          id="nom" 
-          name="nom" 
-          [(ngModel)]="user.nom" 
+        <label for="nom">Nom complet *</label>
+        <input
+          type="text"
+          id="nom"
+          name="nom"
+          [(ngModel)]="user.nom"
           required
-          class="form-control"
-          placeholder="Entrez votre nom"
-        >
+          placeholder="Entrez votre nom complet">
       </div>
 
       <div class="form-group">
-        <label for="email">Email</label>
-        <input 
-          type="email" 
-          id="email" 
-          name="email" 
-          [(ngModel)]="user.email" 
+        <label for="email">Adresse email *</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="user.email"
           required
-          class="form-control"
-          placeholder="Entrez votre email"
-        >
+          placeholder="exemple@gmail.com">
       </div>
 
       <div class="form-group">
-        <label for="password">Mot de passe</label>
-        <input 
-          type="password" 
-          id="password" 
-          name="password" 
-          [(ngModel)]="user.password" 
+        <label for="password">Mot de passe *</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="user.password"
           required
-          class="form-control"
-          placeholder="Entrez votre mot de passe"
-        >
+          placeholder="••••••••">
       </div>
 
       <div class="form-group">
-        <label for="confirmPassword">Confirmer le mot de passe</label>
-        <input 
-          type="password" 
-          id="confirmPassword" 
-          name="confirmPassword" 
-          [(ngModel)]="user.confirmPassword" 
+        <label for="confirmPassword">Confirmer le mot de passe *</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          [(ngModel)]="user.confirmPassword"
           required
-          class="form-control"
-          placeholder="Confirmez votre mot de passe"
-        >
+          placeholder="••••••••">
       </div>
 
-      <button type="submit" class="btn btn-submit" [disabled]="!inscriptionForm.valid">
+      <button type="submit" class="btn-submit" [disabled]="!inscriptionForm.valid">
         S'inscrire
       </button>
     </form>
 
-    <div class="link-container">
-      <p>Déjà un compte? <a routerLink="/connexion">Se connecter</a></p>
-      <a routerLink="/" class="back-link">← Retour à l'accueil</a>
+    <div class="extra-links">
+      <p>Déjà un compte ? <a routerLink="/connexion">Se connecter</a></p>
+      <a routerLink="/" class="back-home">← Retour à l'accueil</a>
     </div>
+
   </div>
+
 </div>
+

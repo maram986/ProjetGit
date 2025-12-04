@@ -15,7 +15,7 @@ import { CartItem } from '../../models/cart.model';
 export class Paiement implements OnInit {
   cartItems: CartItem[] = [];
   total = 0;
-  
+
   address = {
     nom: '',
     prenom: '',
@@ -66,12 +66,12 @@ export class Paiement implements OnInit {
       }
 
       console.log('Commande passée:', orderData);
-      
-      alert('Commande confirmée ! Merci pour votre achat🤍.');
+
+      alert('La Commande bien confirmée Merci pour votre confiance.');
       this.cartService.clearCart();
       this.router.navigate(['/products']);
     } else {
-      alert('Veuillez remplir tous les champs obligatoires.');
+      alert('Sil vous plait remplir les champs .');
     }
   }
 
